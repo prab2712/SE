@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <h1>
+                HTML forms example
+            </h1>
+            <form action="" method="GET">
+                <div>
+                    <label for="name">
+                        Name:
+                    </label>
+                </div>
+                <div>
+                    <label for="mail">
+                        E-mail:
+                    </label>
+                </div>
+                <div>
+                    <label for="msg">
+                        Message:
+                    </label>
+                </div>
+                <button type="submit">
+                    Submit!!
+                </button>
+            </form>
+            <p>If you click the "Submit" button, the form-data will be sent back to this page.
+                Usually, the action sends data to a different file with scripts that can process it.
+            </p>    
+        </body>
