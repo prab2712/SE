@@ -1,0 +1,39 @@
+PRODUCT BACKLOG:
+This Agile product backlog is catalog and tracks all the features we have included in Sprint 1.
+
+Task Name	Task Status	Priority	Story Points	Assigned to Sprint	Sprint Status
+Sprint 1			20		
+Appointing scrum master and product owner	Done	High	3	Yes	
+URL of team project	Done	High 	7	Yes	Completed
+Code of Conduct	Done	High	5	Yes	
+Use of Docker file	Not Started	Medium	2	Yes	
+User Persona	Done	Medium	3	Yes	
+Sprint 2					
+Use of GitHub	Not Started	High		Yes	
+User stories	Not Started	High		Yes	
+Use of Zube.io	Not Started	Low		Yes	
+Kanban/ Project board being used	Not Started	High		Yes	
+Use of sprint boards	Not Started			Yes	
+Full use cases defined	Not Started			Yes	
+Use case diagram defined	Not Started			Yes	
+Sprint 3					
+Suitable unit tests defined	Not Started			Yes	
+Suitable integration	Not Started			Yes	
+Updated task board of user stories showing progress in the technical deliverables	Not Started			Yes	
+Tests running on Travis CI	Not Started			Yes	
+User stories showing progress in the technical deliverables	Not Started			Yes	
+Github repository showing work from all members of the team	Not Started			Yes	
+Database design	Not Started			Yes	
+Database implementation with pre-filled data	Not Started			Yes	
+HTML pages available generated from PUG	Not Started			Yes	
+Dynamic content being pulled from your database to your templates via Pug 	Not Started			Yes	
+Sprint 4					
+Overall application quality and success at meeting the aims set out during the design process	Not Started			Yes	
+Metrics from GitHub	Not Started			Yes	
+Application deployable using a docker-compose file	Not Started			Yes	
+Final version of the task board and project requirements met	Not Started			Yes	
+Deployment working	Not Started			Yes	
+Bug reporting system set-up	Not Started			Yes	
+A group report	Not Started			Yes	
+
+
