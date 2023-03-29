@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+.text{
+    padding: 15px;
+    font-family: fantasy;
+}
+
+.nav{
+    font-size: 25px;
+    box-sizing: border-box;
+    font-family: "Audiowide", sans-serif;
+    padding: 30px
+}
