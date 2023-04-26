@@ -1,0 +1,37 @@
+extends layout
+block body-content
+    body(background='white') 
+        div#root
+            div.View
+                div.head
+                    img(src='images/logo.jpg')
+                    h1.Banner WORLD POPULATION
+                div.topnav
+                    a(href="Home") Home
+                    a(href="World") World
+                    a(href="Countries") Countries
+                    a(href="Continents").active Continents
+                    a(href="Region") Region
+                div(style='height:145px;')
+                div.root
+                    div.continent_div 
+                        h2 Africa
+                        img(src='images/africa.jpg')
+                    div.continent_div 
+                        h2 Antarctica
+                        img(src='images/antarctica.jpg')
+                    div.continent_div 
+                        h2 Asia
+                        img(src='images/asia.jpg')
+                    div.continent_div 
+                        h2 Australia
+                        img(src='images/australia.jpg')
+                    div.continent_div 
+                        h2 Europe
+                        img(src='images/europe.jpg')
+                    div.continent_div 
+                        h2 North America
+                        img(src='images/n_america.jpg')
+                    div.continent_div 
+                        h2 South America
+                        img(src='images/s_america.jpg')
