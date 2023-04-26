@@ -1,0 +1,34 @@
+extends layout
+
+block body-content
+    body(background='white') 
+        div#root
+            div.View
+                div.head
+                    img(src='images/logo.jpg')
+                    h1.Banner WORLD POPULATION
+                div.topnav
+                    a(href="Home") Home
+                    a(href="World") World
+                    a(href="Countries").active Countries
+                    a(href="Continents") Continents
+                    a(href="Region") Region
+                div(style='height:290px;')
+                div.root
+                    center
+                        div.Countries_Link
+                            hr
+                            span#start
+                            a(class='filter-btn', data-filter=".country").active
+                                span  ALL 
+                            - for (var x = 0, str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; x <= 25; x++)
+                                span -
+                                a(class='filter-btn', data-filter="." + str[x])
+                                    span  #{str[x]} 
+                            span#end
+                            hr
+                    ul.Multi_Column_List
+                        div.countries
+                            each country in data
+                                div(class='country', class=country.Name[0])
+                                    li #{country.Name}
