@@ -1,0 +1,111 @@
+.topnav {
+    background-color: aqua;
+    overflow: hidden;
+    position: fixed; 
+    top: 100px; 
+    width: 100%;
+  }
+  
+  .topnav a {
+    float: left;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position:relative;
+  }
+  
+  .topnav a:hover {
+    background-color: green;
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color: green;
+    color: white;
+  }
+
+  .continent_div {
+    width: 45%;
+    float:left;
+    display: block;
+    height: 400px;
+    margin: 2%;
+  }
+  .continent_div h2 {
+    border-top: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    height: 10%; 
+    padding:0px; 
+    margin:0px;
+    text-align: center;
+  }
+  .continent_div img {
+    object-fit: fill; 
+    height:90%; 
+    width:100%;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+  }
+
+  .pageBody{
+    margin:0px;
+    padding: 0px;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+  }
+
+  .head{
+    display:block; 
+    height: 100px; 
+    position:fixed; 
+    top:0px; 
+    width:100%; 
+    background-color: dodgerblue;
+  }
+
+  .Banner {
+    background-color: dodgerblue;
+    color:white;
+    border-color: white;
+    border: solid;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    margin-top: 20px;
+    height: 60px;
+  }
+
+  .head img {
+    float:left;
+    height: 100%;
+    width: 200px;
+  }
+
+  .DataGridView{
+    padding: 20px;
+    align-items: center;
+    
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .show{
+    display: initial;
+  }
+  
+  .filter-btn {
+    cursor: pointer;
+  }
+
+  .filter-btn.active, .filter-btn:hover {
+    background-color: green;
+    color: white;
+  }
