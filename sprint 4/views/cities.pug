@@ -1,0 +1,41 @@
+extends layout
+
+block body-content
+    div.DataGridView
+        center
+            form#filter-fm
+                div(style="margin-bottom:10px")
+                    input(id="txtFilter" name="txtFilter" class="easyui-textbox" style="width:90%")
+                    a(href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="Filter('./getCitiesList/')" style="width: 8%; float: right;") Filter
+            table(id="dg" title="Cities" class="easyui-datagrid" height="700px"
+                url="./getCitiesList" method="get"
+                toolbar="#toolbar" pagination="true" pageList="[10,50,100,500,1000]" pageSize="50"
+                rownumbers="true" fitColumns="true" singleSelect="true")
+                thead
+                    tr
+                        th(field="ID", hidden) ID
+                        th(field="Name", width="25%") Name
+                        th(field="CountryCode", hidden) CountryCode 
+                        th(field="Country", width="25%") Country
+                        th(field="District", width="25%") District
+                        th(field="Population", width="25%") Population
+            div#toolbar
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newCity()") New City
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editCity()") Edit City
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyCity()") Remove City
+            div#dlg(class="easyui-dialog" style="width:500px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'")
+                form#fm(method="get" novalidate style="margin:0;padding:20px 50px")
+                    h3 City Information
+                    div(style="margin-bottom:10px; display:none")
+                        input(name="ID" class="easyui-textbox" label="ID:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="Name" class="easyui-textbox" required="true" label="Name:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="CountryCode" class="easyui-textbox" required="true" label="CountryCode:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="District" class="easyui-textbox" required="true" label="District:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="Population" class="easyui-textbox" type="number" label="Population:" style="width:100%")
+            div#dlg-buttons
+                a(href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveCity()" style="width:90px") Save
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px") Cancel
