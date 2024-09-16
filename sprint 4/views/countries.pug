@@ -1,0 +1,77 @@
+extends layout
+
+block body-content
+    div.DataGridView
+        center
+            form#filter-fm
+                div(style="margin-bottom:10px")
+                    input(id="txtFilter" name="txtFilter" class="easyui-textbox" style="width:90%")
+                    a(href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="Filter('./getCountriesList/')" style="width: 8%; float: right;") Filter
+            table(id="dg" title="Countries" class="easyui-datagrid" height="700px"
+                url="./getCountriesList" method="get"
+                toolbar="#toolbar" pagination="true" pageList="[10,50,100,500,1000]" pageSize="50"
+                rownumbers="true" fitColumns="true" singleSelect="true")
+                thead
+                    tr
+                        th(field="Code", width="10%") Code
+                        th(field="Name", width="25%") Name
+                        th(field="Continent", width="15%") Continent
+                        th(field="Region", width="25%") Region
+                        th(field="SurfaceArea", hidden) SurfaceArea
+                        th(field="IndepYear", hidden) IndepYear
+                        th(field="Population", width="15%") Population
+                        th(field="LifeExpectancy", hidden) LifeExpectancy
+                        th(field="GNP", hidden) GNP
+                        th(field="GNPOld", hidden) GNPOld
+                        th(field="LocalName", hidden) LocalName
+                        th(field="GovernmentForm", hidden) GovernmentForm
+                        th(field="HeadOfState", hidden) HeadOfState
+                        th(field="Capital", width="10%") Capital
+                        th(field="Code2", hidden) Code2
+            div#toolbar
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newCountry()") New Country
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editCountry()") Edit Country
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyCountry()") Remove Country
+            div#dlg(class="easyui-dialog" style="width:500px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'")
+                form#fm(method="get" novalidate style="margin:0;padding:20px 50px")
+                    h3 Country Information
+                    div(style="margin-bottom:10px")
+                        input(name="Code" class="easyui-textbox" required="true" label="Code:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="Name" class="easyui-textbox" required="true" label="Name:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        select(name="Continent" class="easyui-combobox" required="true" label="Continent:" style="width:100%" )
+                            option(value="Asia") Asia
+                            option(value="Europe") Europe
+                            option(value="North America") North America
+                            option(value="Africa") Africa
+                            option(value="Oceania") Oceania
+                            option(value="Antarctica") Antarctica
+                            option(value="South America") South America
+                    div(style="margin-bottom:10px")
+                        input(name="Region" class="easyui-textbox" required="true" label="Region:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="SurfaceArea" class="easyui-textbox" type="number" label="SurfaceArea:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="IndepYear" class="easyui-textbox" type="number" label="IndepYear:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="Population" class="easyui-textbox" type="number" label="Population:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="LifeExpectancy" class="easyui-textbox" type="number" label="LifeExpectancy:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="GNP" class="easyui-textbox" type="number" label="GNP:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="GNPOld" class="easyui-textbox" type="number" label="GNPOld:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="LocalName" class="easyui-textbox" label="LocalName:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="GovernmentForm" class="easyui-textbox" label="GovernmentForm:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="HeadOfState" class="easyui-textbox" label="HeadOfState:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="Capital" class="easyui-textbox" type="number" label="Capital:" style="width:100%")
+                    div(style="margin-bottom:10px")
+                        input(name="Code2" class="easyui-textbox" label="Code2:" style="width:100%")
+            div#dlg-buttons
+                a(href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveCountry()" style="width:90px") Save
+                a(href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px") Cancel                 
